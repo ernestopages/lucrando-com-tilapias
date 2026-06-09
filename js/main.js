@@ -8,15 +8,15 @@
       'julho','agosto','setembro','outubro','novembro','dezembro'
     ];
     var today = new Date();
-    var d1 = new Date(today); d1.setDate(today.getDate() + 1);
-    var d2 = new Date(today); d2.setDate(today.getDate() + 2);
+    var d0 = new Date(today); d0.setDate(today.getDate() - 2);
+    var d1 = new Date(today); d1.setDate(today.getDate() - 1);
     var fmt = function (n) { return String(n).padStart(2, '0'); };
     var el = document.getElementById('offer-dates');
     if (el) {
       el.textContent =
-        fmt(today.getDate()) + ', ' +
+        fmt(d0.getDate()) + ', ' +
         fmt(d1.getDate()) + ' e ' +
-        fmt(d2.getDate()) + ' de ' +
+        fmt(today.getDate()) + ' de ' +
         months[today.getMonth()];
     }
   }
@@ -62,26 +62,29 @@
     var count = items.length;
     if (count === 0) return;
 
+    /* scroll only inside the track — never affect page scroll position */
+    function scrollToIndex(idx) {
+      var item = items[idx];
+      var target = item.offsetLeft - (track.offsetWidth - item.offsetWidth) / 2;
+      track.scrollTo({ left: target, behavior: 'smooth' });
+    }
+
     /* build dots */
     var dots = items.map(function (item, i) {
       var dot = document.createElement('button');
       dot.className = 'carousel__dot';
       dot.setAttribute('aria-label', 'Depoimento ' + (i + 1));
-      dot.addEventListener('click', function () {
-        item.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-      });
+      dot.addEventListener('click', function () { scrollToIndex(i); });
       dotsContainer.appendChild(dot);
       return dot;
     });
 
     function getActiveIndex() {
-      var trackRect = track.getBoundingClientRect();
-      var center = trackRect.left + trackRect.width / 2;
+      var center = track.scrollLeft + track.offsetWidth / 2;
       var minDist = Infinity;
       var activeIdx = 0;
       items.forEach(function (item, i) {
-        var r = item.getBoundingClientRect();
-        var dist = Math.abs(r.left + r.width / 2 - center);
+        var dist = Math.abs(item.offsetLeft + item.offsetWidth / 2 - center);
         if (dist < minDist) { minDist = dist; activeIdx = i; }
       });
       return activeIdx;
@@ -110,7 +113,7 @@
     setInterval(function () {
       if (isPaused) return;
       var next = (getActiveIndex() + 1) % count;
-      items[next].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      scrollToIndex(next);
     }, 3800);
   }
 
