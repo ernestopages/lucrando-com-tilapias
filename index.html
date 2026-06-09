@@ -15,9 +15,11 @@
   <style>
     :root {
       --primary: #0E5A8A;
+      --primary-dark: #0a3d5e;
       --primary-light: #E8F4FB;
       --accent: #16A34A;
       --warning: #DC2626;
+      --highlight: #EA580C;
       --bg: #FFFFFF;
       --text: #1E293B;
     }
@@ -38,44 +40,36 @@
       margin: 0 auto;
       padding: 0 20px;
     }
+    /* Orange highlight spans */
+    .hl { color: var(--highlight); }
+    .hero .hl { color: #FB923C; }
+
     .hero {
       background: var(--primary);
       color: #fff;
       text-align: center;
-      padding: 40px 20px 36px;
-    }
-    .hero__tag {
-      display: inline-block;
-      background: var(--accent);
-      color: #fff;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 4px 14px;
-      border-radius: 20px;
-      margin-bottom: 18px;
+      padding: 36px 20px 36px;
     }
     .hero h1 {
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 800;
-      line-height: 1.3;
-      margin-bottom: 18px;
-      letter-spacing: -0.02em;
+      line-height: 1.35;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
     }
     .hero__sub {
-      font-size: 17px;
-      line-height: 1.65;
+      font-size: 15px;
+      line-height: 1.7;
       color: rgba(255,255,255,0.92);
-      margin-bottom: 28px;
+      margin-bottom: 24px;
       max-width: 520px;
       margin-left: auto;
       margin-right: auto;
     }
     .hero__img {
       width: 100%;
-      max-width: 420px;
-      margin: 0 auto 32px;
+      max-width: 500px;
+      margin: 0 auto 28px;
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 8px 36px rgba(0,0,0,0.28);
@@ -83,7 +77,7 @@
     .btn-cta {
       display: block;
       width: 100%;
-      max-width: 420px;
+      max-width: 440px;
       margin: 0 auto;
       background: var(--accent);
       color: #fff;
@@ -106,8 +100,8 @@
       50% { transform: scale(1.025); opacity: 0.93; }
     }
     @media (min-width: 768px) {
-      .hero { padding: 64px 24px 52px; }
-      .hero h1 { font-size: 40px; }
+      .hero { padding: 56px 24px 52px; }
+      .hero h1 { font-size: 34px; }
       .container { padding: 0 24px; }
     }
   </style>
@@ -119,14 +113,14 @@
 
   <header class="hero">
     <div class="container">
-      <h1>DESCUBRA COMO CRIAR TILÁPIA EM CASA E FATURAR ATÉ R$3.000 POR MÊS COM POUCO ESPAÇO E SEM EXPERIÊNCIA NENHUMA.</h1>
-      <p class="hero__sub">Com videoaulas diretas ao ponto. Você aprende do zero: Como montar, como criar e como vender. Sem enrolação. Sem precisar de terra, açude ou investimento alto.</p>
+      <h1>DESCUBRA COMO CRIAR <span class="hl">TILÁPIA</span> EM <span class="hl">CASA</span> E <span class="hl">FATURAR ATÉ R$3.000</span> POR MÊS COM POUCO ESPAÇO E <span class="hl">SEM EXPERIÊNCIA</span> NENHUMA.</h1>
+      <p class="hero__sub">Com <strong>videoaulas</strong> diretas ao ponto. Você aprende do <strong>zero</strong>: Como <strong>montar</strong>, como <strong>criar</strong> e como <strong>vender</strong>. Sem <strong>enrolação</strong>. Sem precisar de <strong>terra</strong>, <strong>açude</strong> ou <strong>investimento</strong> alto.</p>
       <div class="hero__img">
         <img
           src="https://i.ibb.co/jZ85qQdV/Capa.webp"
           alt="Lucrando com Tilápias – Capa do Curso"
-          width="420"
-          height="315"
+          width="500"
+          height="375"
           loading="eager"
           fetchpriority="high"
         >
@@ -140,16 +134,14 @@
     <!-- IDENTIFICAÇÃO DO PROBLEMA -->
     <section class="section section--white">
       <div class="container">
-        <h2 class="section__title">O CURSO LUCRANDO COM TILÁPIAS PODE SER O QUE TRAZER UMA NOVA REALIDADE FINANCEIRA PARA A SUA FAMÍLIA EM POUCO TEMPO</h2>
+        <h2 class="section__title">O CURSO <span class="hl">LUCRANDO COM TILÁPIAS</span> PODE SER O QUE VAI <span class="hl">TRAZER</span> UMA NOVA REALIDADE <span class="hl">FINANCEIRA</span> PARA A SUA <span class="hl">FAMÍLIA</span> EM <span class="hl">POUCO TEMPO</span></h2>
         <p class="section__lead">Se você estiver passando por pelo menos uma das situações abaixo, isso é para você…</p>
         <ul class="checklist">
-          <li><span>✅</span><span>Está desempregado e sem saber de onde vai vir o próximo dinheiro</span></li>
-          <li><span>✅</span><span>Tem um quintal, terreno ou sítio parado sem gerar NENHUMA renda</span></li>
-          <li><span>✅</span><span>Vive cansado de trabalhar o mês inteiro pra ver o salário sumir em dias</span></li>
-          <li><span>✅</span><span>Sonha em ter o seu negócio mas trava na hora de começar</span></li>
-          <li><span>✅</span><span>Tem medo de investir e jogar dinheiro fora por não saber como começar</span></li>
-          <li><span>✅</span><span>Já tentou criar tilápias e viu tudo dar errado sem entender o porquê</span></li>
-          <li><span>✅</span><span>Quer parar de depender de patrão, horário e fim de mês apertado</span></li>
+          <li><span>✅</span><span>Está desempregado e sem renda</span></li>
+          <li><span>✅</span><span>Tem um quintal, terreno ou sítio parado sem gerar renda nenhuma</span></li>
+          <li><span>✅</span><span>Está cansado de trabalhar o mês inteiro e o dinheiro não sobrar</span></li>
+          <li><span>✅</span><span>Sonha ter seu próprio negócio mas não sabe por onde começar</span></li>
+          <li><span>✅</span><span>Já tentou criar tilápias e deu errado</span></li>
         </ul>
         <a href="#oferta" class="btn-cta">QUERO COMEÇAR AGORA</a>
       </div>
@@ -158,19 +150,19 @@
     <!-- POR QUE TILÁPIA -->
     <section class="section section--blue">
       <div class="container">
-        <h2 class="section__title">POR QUE A TILÁPIA EM CAIXA D'ÁGUA É O NEGÓCIO PERFEITO PRA QUEM QUER COMEÇAR UM NEGÓCIO DO ZERO</h2>
+        <h2 class="section__title">POR QUE A <span class="hl">TILÁPIA</span> EM <span class="hl">CAIXA D'ÁGUA</span> É O <span class="hl">NEGÓCIO PERFEITO</span> PRA QUEM QUER <span class="hl">COMEÇAR</span> UM NEGÓCIO DO <span class="hl">ZERO</span></h2>
         <div class="why-points">
           <p>É fácil de começar, cabe em qualquer quintal e o investimento é baixíssimo.</p>
           <p>A tilápia cresce rápido, se reproduz com facilidade e tem procura o ano inteiro.</p>
           <p>Uma única caixa já te da um lucro de até R$1500,00. E o melhor: quanto mais caixas você monta, mais você fatura!</p>
         </div>
-        <p class="why-rasmussen">Até o Richard Rasmussen sabe o quanto é lucrativo criar tilápia:</p>
+        <p class="why-rasmussen">A criação de tilápia é a que da mais dinheiro segundo o Richard Rasmussen:</p>
         <div class="why-img">
           <img
             src="https://i.ibb.co/93qFxpyv/Design-sem-nome-2.png"
             alt="Criação de tilápia em caixa d'água"
-            width="420"
-            height="315"
+            width="500"
+            height="375"
             loading="lazy"
           >
         </div>
@@ -180,7 +172,7 @@
           <li><span>✅</span><span>Cresce rápido e se reproduz fácil</span></li>
           <li><span>✅</span><span>Procura o ano inteiro</span></li>
           <li><span>✅</span><span>Funciona em qualquer região do Brasil</span></li>
-          <li><span>✅</span><span>Você come o peixe, lucra com o comércio e economiza no açougue</span></li>
+          <li><span>✅</span><span>Você lucra com o comércio, tem peixe para consumo próprio e ainda economiza no açougue</span></li>
         </ul>
         <a href="#oferta" class="btn-cta">SIM! QUERO COMEÇAR AGORA</a>
       </div>
@@ -189,55 +181,55 @@
     <!-- MÓDULOS -->
     <section class="section section--white">
       <div class="container">
-        <h2 class="section__title">VEJA TUDO O QUE VOCÊ VAI APRENDER NO LUCRANDO COM TILÁPIAS:</h2>
+        <h2 class="section__title">VEJA <span class="hl">TUDO</span> O QUE VOCÊ VAI <span class="hl">APRENDER</span> NO <span class="hl">LUCRANDO COM TILÁPIAS</span>:</h2>
         <div class="modules-grid">
           <div class="module-card">
             <img src="https://i.ibb.co/0VQdQLGQ/1.webp" alt="Módulo 1 – Como montar o sistema" width="160" height="120" loading="lazy">
-            <p>COMO MONTAR O SISTEMA PARA SUA PRIMEIRA CAIXA</p>
+            <p><strong>COMO MONTAR</strong> O SISTEMA PARA SUA PRIMEIRA CAIXA</p>
           </div>
           <div class="module-card">
             <img src="https://i.ibb.co/Nd4H6X26/2.webp" alt="Módulo 2 – A água perfeita" width="160" height="120" loading="lazy">
-            <p>A ÁGUA PERFEITA PRAS TILÁPIAS</p>
+            <p>A <strong>ÁGUA PERFEITA</strong> PRAS TILÁPIAS</p>
           </div>
           <div class="module-card">
             <img src="https://i.ibb.co/HLnZZFn8/3.webp" alt="Módulo 3 – Onde comprar filhotes" width="160" height="120" loading="lazy">
-            <p>ONDE COMPRAR OS FILHOTES</p>
+            <p><strong>ONDE COMPRAR</strong> OS FILHOTES</p>
           </div>
           <div class="module-card">
             <img src="https://i.ibb.co/KcKkY1Bp/4.webp" alt="Módulo 4 – Ração em cada fase" width="160" height="120" loading="lazy">
-            <p>QUANTO DE RAÇÃO DAR EM CADA FASE</p>
+            <p><strong>QUANTO DE RAÇÃO</strong> DAR EM CADA FASE</p>
           </div>
           <div class="module-card">
             <img src="https://i.ibb.co/fGkc1h9V/5.webp" alt="Módulo 5 – Prevenir doenças" width="160" height="120" loading="lazy">
-            <p>COMO NÃO PERDER NENHUM PEIXE PARA DOENÇAS</p>
+            <p>COMO <strong>NÃO PERDER</strong> NENHUM PEIXE PARA DOENÇAS</p>
           </div>
           <div class="module-card">
             <img src="https://i.ibb.co/YB0VwLFw/6.webp" alt="Módulo 6 – Hora certa de colher" width="160" height="120" loading="lazy">
-            <p>A HORA CERTA DE COLHER</p>
+            <p>A <strong>HORA CERTA</strong> DE COLHER</p>
           </div>
           <div class="module-card">
             <img src="https://i.ibb.co/B2W4FV8h/7.webp" alt="Módulo 7 – Como e pra quem vender" width="160" height="120" loading="lazy">
-            <p>COMO E PRA QUEM VENDER</p>
+            <p>COMO E <strong>PRA QUEM VENDER</strong></p>
           </div>
           <div class="module-card">
             <img src="https://i.ibb.co/BHFhZdMx/8.webp" alt="Módulo 8 – Multiplicar caixas" width="160" height="120" loading="lazy">
-            <p>COMO MULTIPLICAR SUAS CAIXAS</p>
+            <p>COMO <strong>MULTIPLICAR</strong> SUAS CAIXAS</p>
           </div>
         </div>
-        <p class="modules-more">E muito mais, TUDO o que você precisa para iniciar do jeito certo…</p>
+        <p class="modules-more">E <strong>muito mais</strong>, <strong>TUDO</strong> o que você <strong>precisa</strong> para <strong>iniciar</strong> do jeito certo…</p>
       </div>
     </section>
 
     <!-- IMAGINE -->
     <section class="section section--blue">
       <div class="container">
-        <h2 class="section__title">IMAGINE GANHAR DE R$2.000 A R$6.000 POR MÊS DENTRO DE CASA</h2>
-        <ul class="checklist">
-          <li><span>✅</span><span>Quer ganhar de R$2.000 a R$6.000 por mês criando tilápia em casa?</span></li>
-          <li><span>✅</span><span>Quer aprender tudo do absoluto zero, mesmo sem nenhuma experiência?</span></li>
-          <li><span>✅</span><span>Quer parar de trabalhar pro patrão e ter o seu próprio negócio?</span></li>
-          <li><span>✅</span><span>Quer começar com pouco e transformar isso em um negócio sólido e lucrativo?</span></li>
-          <li><span>✅</span><span>Quer começar um novo hobby prazeroso?</span></li>
+        <h2 class="section__title">IMAGINE <span class="hl">GANHAR</span> DE <span class="hl">R$2.000</span> A <span class="hl">R$6.000</span> POR MÊS DENTRO DE <span class="hl">CASA</span></h2>
+        <ul class="checklist checklist--emoji">
+          <li><span>💰</span><span>Quer ganhar de R$2.000 a R$6.000 por mês criando tilápia em casa?</span></li>
+          <li><span>📖</span><span>Quer aprender tudo do absoluto zero, mesmo sem nenhuma experiência?</span></li>
+          <li><span>🚀</span><span>Quer parar de trabalhar pro patrão e ter o seu próprio negócio?</span></li>
+          <li><span>🌱</span><span>Quer começar com pouco e transformar isso em um negócio sólido e lucrativo?</span></li>
+          <li><span>🎣</span><span>Quer começar um novo hobby prazeroso?</span></li>
         </ul>
         <a href="#oferta" class="btn-cta">SIM! QUERO COMEÇAR AGORA</a>
       </div>
@@ -246,7 +238,7 @@
     <!-- BÔNUS -->
     <section class="section section--white">
       <div class="container">
-        <h2 class="section__title">PARA TE AJUDAR AINDA MAIS NA SUA JORNADA, ADQUIRINDO O CURSO LUCRANDO COM TILÁPIAS NOS PRÓXIMOS MINUTOS, VOCÊ AINDA RECEBE +3 PRESENTES EXCLUSIVOS!</h2>
+        <h2 class="section__title">PARA TE <span class="hl">AJUDAR</span> AINDA <span class="hl">MAIS</span> NA SUA <span class="hl">JORNADA</span>, <span class="hl">ADQUIRINDO</span> O CURSO <span class="hl">LUCRANDO COM TILÁPIAS</span> NOS PRÓXIMOS <span class="hl">MINUTOS</span>, VOCÊ AINDA RECEBE <span class="hl">+3 PRESENTES EXCLUSIVOS</span>!</h2>
         <div class="bonuses">
           <div class="bonus-card">
             <img src="https://i.ibb.co/XxMg4b97/B-nus-01-Lista-de-Fornecedores.webp" alt="Bônus 1: Lista de Fornecedores" width="200" height="200" loading="lazy">
@@ -276,8 +268,8 @@
     <!-- DEPOIMENTOS -->
     <section class="section section--blue">
       <div class="container">
-        <h2 class="section__title">QUEM JÁ COMEÇOU RECOMENDA:</h2>
-        <p class="section__lead">Eu recebo mensagens como essas todos os dias, e logo será você me enviando mensagens assim também…</p>
+        <h2 class="section__title">QUEM JÁ COMEÇOU <span class="hl">RECOMENDA</span>:</h2>
+        <p class="section__lead">Eu recebo <strong>mensagens</strong> como essas <strong>todos os dias</strong>, e logo será <strong>você</strong> me <strong>enviando</strong> mensagens assim <strong>também</strong>…</p>
       </div>
       <div class="carousel" id="testimonials-carousel" aria-label="Depoimentos de alunos">
         <div class="carousel__track" id="carousel-track">
@@ -310,33 +302,38 @@
         </div>
 
         <div class="offer-box">
-          <h2 class="offer-box__name">LUCRANDO COM TILÁPIAS</h2>
-          <div class="offer-box__mockup">
-            <img src="https://i.ibb.co/ynjr3v1p/Mockup-Principal.webp" alt="Lucrando com Tilápias – Mockup do Produto" width="320" height="240" loading="lazy">
+          <div class="offer-box__header">
+            <h2 class="offer-box__name">LUCRANDO COM<br>TILÁPIAS</h2>
+            <div class="offer-box__mockup">
+              <img src="https://i.ibb.co/ynjr3v1p/Mockup-Principal.webp" alt="Lucrando com Tilápias – Mockup do Produto" width="360" height="270" loading="lazy">
+            </div>
           </div>
-          <ul class="checklist checklist--centered">
-            <li><span>✅</span><span>Videoaulas completas passo a passo</span></li>
-            <li><span>✅</span><span>Guia em PDF para consultar quando quiser</span></li>
-            <li><span>✅</span><span>Bônus 1: Lista de Fornecedores</span></li>
-            <li><span>✅</span><span>Bônus 2: Venda Antes de Colher</span></li>
-            <li><span>✅</span><span>Bônus 3: Planilha de Lucro Automática</span></li>
-            <li><span>✅</span><span>Acesso imediato após a compra</span></li>
-            <li><span>✅</span><span>Garantia de 07 dias</span></li>
-          </ul>
-          <div class="offer-price">
-            <p class="offer-price__from">De <s>R$99,90</s> por apenas</p>
-            <p class="offer-price__value">R$10</p>
-          </div>
-          <!-- CHECKOUT: substituir #CHECKOUT pelo link real antes do lançamento -->
-          <a href="#CHECKOUT" class="btn-cta btn-cta--large">QUERO ACESSAR AGORA</a>
-          <div class="trust-badges">
-            <span>🔒 Compra Segura</span>
-            <span>✅ Satisfação Garantida</span>
-            <span>🔐 Privacidade Protegida</span>
-          </div>
-          <div class="timer-block">
-            <p class="timer-label">⏱ A OFERTA ENCERRA EM:</p>
-            <p class="timer-display" id="countdown" aria-live="polite">30:00</p>
+          <div class="offer-box__body">
+            <ul class="checklist checklist--offer">
+              <li><span>✅</span><span><strong>Videoaulas</strong> completas passo a passo</span></li>
+              <li><span>✅</span><span>Guia em PDF para <strong>consultar</strong> quando quiser</span></li>
+              <li><span>✅</span><span><strong>Bônus 1</strong>: Lista de Fornecedores</span></li>
+              <li><span>✅</span><span><strong>Bônus 2</strong>: Venda Antes de Colher</span></li>
+              <li><span>✅</span><span><strong>Bônus 3</strong>: Planilha de Lucro Automática</span></li>
+              <li><span>✅</span><span><strong>Acesso imediato</strong> após a compra</span></li>
+              <li><span>✅</span><span>Garantia de <strong>07 dias</strong></span></li>
+            </ul>
+            <hr class="offer-divider">
+            <div class="offer-price">
+              <p class="offer-price__from">De <s>R$99,90</s> por apenas</p>
+              <p class="offer-price__value">R$10</p>
+            </div>
+            <!-- CHECKOUT: substituir #CHECKOUT pelo link real antes do lançamento -->
+            <a href="#CHECKOUT" class="btn-cta btn-cta--large">QUERO ACESSAR AGORA</a>
+            <div class="trust-badges">
+              <span>🔒 Compra Segura</span>
+              <span>✅ Satisfação Garantida</span>
+              <span>🔐 Privacidade Protegida</span>
+            </div>
+            <div class="timer-block">
+              <p class="timer-label">⏱ A OFERTA ENCERRA EM:</p>
+              <p class="timer-display" id="countdown" aria-live="polite">30:00</p>
+            </div>
           </div>
         </div>
       </div>
@@ -347,7 +344,8 @@
       <div class="container">
         <div class="guarantee">
           <img src="https://i.ibb.co/pv6zQcGj/Garantia.webp" alt="Selo de garantia de 7 dias" width="130" height="130" loading="lazy">
-          <h2>GARANTIA INCONDICIONAL!<br>RISCO ZERO PARA VOCÊ!</h2>
+          <h2><span class="hl">GARANTIA</span> INCONDICIONAL!</h2>
+          <p class="guarantee__subtitle">RISCO ZERO PARA VOCÊ!</p>
           <p>Confiamos tanto que o conteúdo irá transformar a sua vida e lhe ajudar a conquistar os seus sonhos, que podemos lhe oferecer uma garantia incondicional de até 7 dias após o recebimento do material. É isso mesmo! Se você não gostar do conteúdo ou achar que ele não é o que esperava, basta solicitar o reembolso e lhe devolveremos seu dinheiro integralmente, centavo por centavo, sem perguntas ou qualquer dor de cabeça.</p>
           <!-- CHECKOUT: substituir #CHECKOUT pelo link real antes do lançamento -->
           <a href="#CHECKOUT" class="btn-cta">QUERO ACESSAR AGORA</a>
@@ -358,31 +356,31 @@
     <!-- FAQ -->
     <section class="section section--white">
       <div class="container">
-        <h2 class="section__title">PERGUNTAS FREQUENTES</h2>
+        <h2 class="section__title">PERGUNTAS <span class="hl">FREQUENTES</span></h2>
         <div class="faq">
           <details class="faq__item">
-            <summary class="faq__question">P: Preciso ter experiência para começar?</summary>
-            <div class="faq__answer"><p>R: Não. O guia foi feito exatamente pra quem nunca criou peixe na vida. Você vai aprender tudo do zero, passo a passo.</p></div>
+            <summary class="faq__question">Preciso ter experiência para começar?</summary>
+            <div class="faq__answer"><p>Não. O guia foi feito exatamente pra quem nunca criou peixe na vida. Você vai aprender tudo do zero, passo a passo.</p></div>
           </details>
           <details class="faq__item">
-            <summary class="faq__question">P: Funciona em apartamento ou casa pequena?</summary>
-            <div class="faq__answer"><p>R: Funciona em qualquer espaço com um cantinho livre. Um quintal pequeno, uma varanda ou um corredor já é suficiente pra começar.</p></div>
+            <summary class="faq__question">Funciona em apartamento ou casa pequena?</summary>
+            <div class="faq__answer"><p>Funciona em qualquer espaço com um cantinho livre. Um quintal pequeno, uma varanda ou um corredor já é suficiente pra começar.</p></div>
           </details>
           <details class="faq__item">
-            <summary class="faq__question">P: Funciona em qualquer região do Brasil?</summary>
-            <div class="faq__answer"><p>R: Sim. O guia ensina como adaptar a criação pro clima da sua região, seja no frio do Sul ou no calor do Norte e Nordeste.</p></div>
+            <summary class="faq__question">Funciona em qualquer região do Brasil?</summary>
+            <div class="faq__answer"><p>Sim. O guia ensina como adaptar a criação pro clima da sua região, seja no frio do Sul ou no calor do Norte e Nordeste.</p></div>
           </details>
           <details class="faq__item">
-            <summary class="faq__question">P: Como vou receber o material?</summary>
-            <div class="faq__answer"><p>R: Acesso imediato após a compra. Você recebe o link no seu e-mail e já pode começar a assistir na hora.</p></div>
+            <summary class="faq__question">Como vou receber o material?</summary>
+            <div class="faq__answer"><p>Acesso imediato após a compra. Você recebe o link no seu e-mail e já pode começar a assistir na hora.</p></div>
           </details>
           <details class="faq__item">
-            <summary class="faq__question">P: E se eu não gostar?</summary>
-            <div class="faq__answer"><p>R: Você tem 07 dias de garantia. Se não gostar por qualquer motivo, devolvemos tudo sem perguntas.</p></div>
+            <summary class="faq__question">E se eu não gostar?</summary>
+            <div class="faq__answer"><p>Você tem 07 dias de garantia. Se não gostar por qualquer motivo, devolvemos tudo sem perguntas.</p></div>
           </details>
           <details class="faq__item">
-            <summary class="faq__question">P: Vou conseguir vender o peixe?</summary>
-            <div class="faq__answer"><p>R: Sim. Um dos bônus é exatamente sobre isso: como divulgar sua criação e ter fila de compradores te chamando no zap antes de tirar o primeiro peixe da água.</p></div>
+            <summary class="faq__question">Vou conseguir vender o peixe?</summary>
+            <div class="faq__answer"><p>Sim. Um dos bônus é exatamente sobre isso: como divulgar sua criação e ter fila de compradores te chamando no zap antes de tirar o primeiro peixe da água.</p></div>
           </details>
         </div>
       </div>
