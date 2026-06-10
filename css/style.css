@@ -130,45 +130,41 @@
 
 /* ----- BONUSES ----- */
 .bonuses {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: block;
 }
 
 .bonus-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   background: #fff;
   border-radius: 18px;
-  padding: 24px 22px 22px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 20px rgba(14,90,138,0.12);
-  position: relative;
-  overflow: visible;
+  overflow: hidden;
+  text-align: center;
 }
 
 .bonus-card__badge {
-  display: inline-block;
+  display: block;
   background: var(--accent);
   color: #fff;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  padding: 4px 16px;
-  border-radius: 20px;
-  margin-bottom: 16px;
-  align-self: center;
+  padding: 8px 0;
+  width: 100%;
 }
 
 .bonus-card img {
-  width: 200px;
-  height: 200px;
+  display: block;
+  width: 180px;
+  height: 180px;
   object-fit: contain;
-  border-radius: 12px;
-  margin-bottom: 18px;
-  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.18));
+  margin: 20px auto 0;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.20));
+}
+
+.bonus-text {
+  padding: 16px 20px 22px;
 }
 
 .bonus-text h3 {
@@ -183,7 +179,6 @@
   font-size: 14px;
   line-height: 1.65;
   color: var(--text);
-  opacity: 0.85;
 }
 
 /* ----- CAROUSEL ----- */
@@ -309,6 +304,11 @@
   font-size: 15px;
   padding: 8px 0;
   border-bottom: 1px solid rgba(14,90,138,0.08);
+  text-align: left;
+}
+
+.checklist--offer li span {
+  text-align: left;
 }
 
 .checklist--offer li:last-child { border-bottom: none; }
@@ -501,16 +501,16 @@ details[open] .faq__question::after { transform: rotate(45deg); }
   .module-card p { font-size: 13px; }
 
   .bonuses {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
-    align-items: stretch;
   }
 
-  .bonus-card { flex: 1; }
+  .bonus-card { margin-bottom: 0; }
 
   .bonus-card img {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
   }
 
   .carousel__item { width: 300px; }
