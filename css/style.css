@@ -3,7 +3,7 @@
    ============================================ */
 
 /* ----- SECTIONS ----- */
-.section { padding: 52px 0; }
+.section { padding: 36px 0; }
 .section--white { background: #fff; }
 .section--blue { background: var(--primary-light); }
 
@@ -492,7 +492,7 @@ details[open] .faq__question::after { transform: rotate(45deg); }
    DESKTOP: min-width 768px
    ============================================ */
 @media (min-width: 768px) {
-  .section { padding: 72px 0; }
+  .section { padding: 56px 0; }
   .section__title { font-size: 28px; }
 
   .modules-grid {
