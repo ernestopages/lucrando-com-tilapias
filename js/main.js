@@ -101,20 +101,31 @@
     updateDots();
     track.addEventListener('scroll', updateDots, { passive: true });
 
-    /* auto-play */
-    var isPaused = false;
-    track.addEventListener('touchstart', function () { isPaused = true; }, { passive: true });
-    track.addEventListener('touchend', function () {
-      setTimeout(function () { isPaused = false; }, 3200);
+    /* auto-play — pausa real enquanto dedo está na tela */
+    var isTouching = false;
+    var pauseUntil = 0;
+    var resumeTimer = null;
+
+    track.addEventListener('touchstart', function () {
+      isTouching = true;
+      pauseUntil = Infinity;
+      if (resumeTimer) { clearTimeout(resumeTimer); resumeTimer = null; }
     }, { passive: true });
-    track.addEventListener('mouseenter', function () { isPaused = true; });
-    track.addEventListener('mouseleave', function () { isPaused = false; });
+
+    track.addEventListener('touchend', function () {
+      isTouching = false;
+      if (resumeTimer) clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(function () { pauseUntil = 0; }, 10000);
+    }, { passive: true });
+
+    track.addEventListener('mouseenter', function () { pauseUntil = Infinity; });
+    track.addEventListener('mouseleave', function () { pauseUntil = 0; });
 
     setInterval(function () {
-      if (isPaused) return;
+      if (isTouching || Date.now() < pauseUntil) return;
       var next = (getActiveIndex() + 1) % count;
       scrollToIndex(next);
-    }, 3800);
+    }, 7000);
   }
 
   /* ---- SMOOTH SCROLL ANCHORS ---- */
