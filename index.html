@@ -19,7 +19,7 @@
       --primary-light: #E8F4FB;
       --accent: #16A34A;
       --warning: #DC2626;
-      --highlight: #EA580C;
+      --highlight: #D97706;
       --bg: #FFFFFF;
       --text: #1E293B;
     }
@@ -40,9 +40,9 @@
       margin: 0 auto;
       padding: 0 20px;
     }
-    /* Orange highlight spans */
+    /* Amber/yellow-orange highlight spans */
     .hl { color: var(--highlight); }
-    .hero .hl { color: #FB923C; }
+    .hero .hl { color: #FCD34D; }
 
     .hero {
       background: var(--primary);
@@ -51,7 +51,7 @@
       padding: 36px 20px 36px;
     }
     .hero h1 {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 800;
       line-height: 1.35;
       margin-bottom: 16px;
@@ -69,10 +69,46 @@
     .hero__img {
       width: 100%;
       max-width: 500px;
-      margin: 0 auto 28px;
+      margin: 0 auto 20px;
       border-radius: 14px;
       overflow: hidden;
       box-shadow: 0 8px 36px rgba(0,0,0,0.28);
+    }
+    .hero-price {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 14px;
+      padding: 18px 20px 14px;
+      margin: 0 auto 24px;
+      max-width: 440px;
+      text-align: center;
+    }
+    .hero-price__from {
+      font-size: 14px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 2px;
+    }
+    .hero-price__from s { color: #FCA5A5; }
+    .hero-price__label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.85);
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .hero-price__value {
+      font-size: 52px;
+      font-weight: 900;
+      color: #4ADE80;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .hero-price__desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.55;
     }
     .btn-cta {
       display: block;
@@ -101,7 +137,7 @@
     }
     @media (min-width: 768px) {
       .hero { padding: 56px 24px 52px; }
-      .hero h1 { font-size: 34px; }
+      .hero h1 { font-size: 28px; }
       .container { padding: 0 24px; }
     }
   </style>
@@ -114,7 +150,7 @@
   <header class="hero">
     <div class="container">
       <h1>DESCUBRA COMO CRIAR <span class="hl">TILÁPIA</span> EM <span class="hl">CASA</span> E <span class="hl">FATURAR ATÉ R$3.000</span> POR MÊS COM POUCO ESPAÇO E <span class="hl">SEM EXPERIÊNCIA</span> NENHUMA.</h1>
-      <p class="hero__sub">Com <strong>videoaulas</strong> diretas ao ponto. Você aprende do <strong>zero</strong>: Como <strong>montar</strong>, como <strong>criar</strong> e como <strong>vender</strong>. Sem <strong>enrolação</strong>. Sem precisar de <strong>terra</strong>, <strong>açude</strong> ou <strong>investimento</strong> alto.</p>
+      <p class="hero__sub">Com <strong>videoaulas</strong> diretas ao ponto. Você aprende do <strong>zero</strong>: Como <strong>montar</strong>, como <strong>criar</strong> e como <strong>vender</strong>. Sem <strong>enrolação</strong>.</p>
       <div class="hero__img">
         <img
           src="https://i.ibb.co/jZ85qQdV/Capa.webp"
@@ -124,6 +160,12 @@
           loading="eager"
           fetchpriority="high"
         >
+      </div>
+      <div class="hero-price">
+        <p class="hero-price__from">De <s>R$99,90</s></p>
+        <p class="hero-price__label">POR APENAS</p>
+        <p class="hero-price__value">R$10,00</p>
+        <p class="hero-price__desc">Apenas um valor simbólico para separar quem realmente quer aprender a criar tilápias dos curiosos.</p>
       </div>
       <a href="#oferta" class="btn-cta">QUERO COMEÇAR AGORA</a>
     </div>
