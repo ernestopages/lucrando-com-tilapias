@@ -486,8 +486,38 @@ details[open] .faq__question::after { transform: rotate(45deg); }
   background: var(--primary);
   color: rgba(255,255,255,0.65);
   text-align: center;
-  padding: 28px 20px;
+  padding: 28px 20px 32px;
   font-size: 13px;
+}
+
+.footer__links {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.footer__link {
+  color: rgba(255,255,255,0.75);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer__sep {
+  margin: 0 10px;
+  opacity: 0.5;
+}
+
+.footer__divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin: 20px 0 16px;
+}
+
+.footer__disclaimer {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 /* ============================================
