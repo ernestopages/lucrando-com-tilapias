@@ -375,6 +375,7 @@
   text-transform: uppercase;
   opacity: 0.8;
   margin-bottom: 6px;
+  text-align: center;
 }
 
 .timer-display {
@@ -384,6 +385,7 @@
   letter-spacing: 0.04em;
   font-variant-numeric: tabular-nums;
   line-height: 1;
+  text-align: center;
 }
 
 /* ----- GUARANTEE ----- */
