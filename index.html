@@ -10,7 +10,14 @@
   <meta property="og:image" content="https://i.ibb.co/ynjr3v1p/Mockup-Principal.webp">
   <meta property="og:type" content="website">
 
-  <link rel="preconnect" href="https://i.ibb.co">
+  <!-- Resource hints: conexões antecipadas aos domínios externos -->
+  <link rel="preconnect" href="https://i.ibb.co" crossorigin>
+  <link rel="dns-prefetch" href="https://i.ibb.co">
+  <link rel="preconnect" href="https://cdn.utmify.com.br" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.utmify.com.br">
+
+  <!-- Preload da imagem hero: browser baixa imediatamente, antes de parsear o body -->
+  <link rel="preload" href="https://i.ibb.co/4gMGLDGj/hero.webp" as="image" fetchpriority="high">
 
   <style>
     :root {
@@ -143,27 +150,6 @@
 
   <link rel="stylesheet" href="css/style.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="css/style.css"></noscript>
-
-  <!-- UTMify Pixel -->
-  <script>
-    window.pixelId = "6a299cd121e01ada43741a67";
-    var a = document.createElement("script");
-    a.setAttribute("async", "");
-    a.setAttribute("defer", "");
-    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-    document.head.appendChild(a);
-  </script>
-
-  <!-- UTMify UTMs -->
-  <script
-    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-    data-utmify-prevent-xcod-sck
-    data-utmify-prevent-subids
-    data-utmify-ignore-iframe
-    data-utmify-is-cartpanda
-    async
-    defer
-  ></script>
 </head>
 <body>
 
@@ -446,5 +432,24 @@
   </footer>
 
   <script src="js/main.js" defer></script>
+
+  <!-- UTMify: movido para o final do body para não atrasar o first paint -->
+  <script>
+    window.pixelId = "6a299cd121e01ada43741a67";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+  <script
+    src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+    data-utmify-prevent-xcod-sck
+    data-utmify-prevent-subids
+    data-utmify-ignore-iframe
+    data-utmify-is-cartpanda
+    async
+    defer
+  ></script>
 </body>
 </html>
