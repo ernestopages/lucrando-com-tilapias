@@ -266,12 +266,12 @@
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 26px;
-  box-shadow: 0 4px 18px rgba(14,90,138,0.10);
+  box-shadow: 0 8px 32px rgba(14,90,138,0.30);
 }
 
 .plan-basic__name {
   background: var(--primary-light);
-  color: var(--primary);
+  color: #000;
   font-size: 22px;
   font-weight: 900;
   letter-spacing: 0.03em;
@@ -297,17 +297,15 @@
 .plan-basic__price {
   font-size: 44px;
   font-weight: 900;
-  color: var(--text);
+  color: var(--accent);
   text-align: center;
   line-height: 1.1;
   margin-bottom: 16px;
 }
 
-/* botão do plano básico: discreto, sem pulsar */
+/* botão do plano básico: verde, sem pulsar */
 .btn-cta--static {
   animation: none;
-  background: var(--primary);
-  box-shadow: 0 3px 12px rgba(14,90,138,0.25);
   font-size: 15px;
 }
 
@@ -326,13 +324,14 @@
 }
 
 .offer-box__name {
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 900;
   color: #fff;
   margin-bottom: 12px;
   letter-spacing: -0.01em;
-  line-height: 1.15;
+  line-height: 1.2;
   text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  white-space: nowrap;
 }
 
 .offer-box__bestseller {
@@ -402,7 +401,7 @@
 .offer-price__from s { color: var(--warning); font-weight: 700; }
 
 .offer-price__value {
-  font-size: 58px;
+  font-size: 46px;
   font-weight: 900;
   color: var(--accent);
   line-height: 1;
@@ -420,9 +419,14 @@
 }
 
 .btn-cta--large {
-  font-size: 19px;
-  padding: 20px 24px;
+  font-size: 15px;
+  letter-spacing: 0.03em;
+  padding: 18px 14px;
+  white-space: nowrap;
 }
+
+/* destaque verde em palavras-chave */
+.txt-green { color: var(--accent); }
 
 /* botão principal de compra: verde mais vivo, com pulso */
 .btn-cta--buy {
@@ -635,7 +639,8 @@ details[open] .faq__question::after { transform: rotate(45deg); }
   .offer-box { max-width: 560px; margin: 0 auto; }
   .offer-box__name { font-size: 40px; }
   .offer-box__mockup { max-width: 400px; }
-  .offer-price__value { font-size: 70px; }
+  .offer-price__value { font-size: 56px; }
+  .btn-cta--large { font-size: 18px; padding: 20px 24px; }
   .timer-display { font-size: 56px; }
   .trust-badges { font-size: 12px; }
 
