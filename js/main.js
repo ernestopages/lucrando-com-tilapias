@@ -162,6 +162,61 @@
     });
   }
 
+  /* ---- POPUP DE SAÍDA (desconto secreto) ---- */
+  function initExitPopup() {
+    var overlay = document.getElementById('exit-overlay');
+    if (!overlay) return;
+    var closeBtn = document.getElementById('exit-close');
+    var refuseBtn = document.getElementById('exit-refuse');
+    var upsell = document.getElementById('upsell-overlay');
+
+    function open() {
+      if (!overlay.hidden) return;
+      /* não sobrepõe o popup de upgrade do plano básico */
+      if (upsell && !upsell.hidden) return;
+      overlay.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      overlay.hidden = true;
+      document.body.style.overflow = '';
+    }
+
+    if (closeBtn) closeBtn.addEventListener('click', close);
+    if (refuseBtn) refuseBtn.addEventListener('click', close);
+
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !overlay.hidden) close();
+    });
+
+    /* desktop: mouse saindo pelo topo da janela (fechar aba / voltar) */
+    document.addEventListener('mouseout', function (e) {
+      if (!e.relatedTarget && e.clientY <= 0) open();
+    });
+
+    /* mobile: botão voltar — intercepta uma vez; se apertar voltar
+       com o popup aberto, deixa sair de verdade */
+    if (window.history && history.pushState) {
+      history.pushState({ lct: true }, '');
+      window.addEventListener('popstate', function () {
+        if (overlay.hidden) {
+          open();
+          history.pushState({ lct: true }, '');
+        }
+      });
+    }
+
+    /* mobile: saiu do app/aba e voltou */
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState === 'visible') open();
+    });
+  }
+
   /* ---- SMOOTH SCROLL ANCHORS ---- */
   function initAnchors() {
     var oferta = document.getElementById('oferta');
@@ -180,6 +235,7 @@
     initTimer();
     initCarousel();
     initUpsell();
+    initExitPopup();
     initAnchors();
   });
 

@@ -146,8 +146,8 @@
     }
   </style>
 
-  <link rel="stylesheet" href="css/style.css?v=5" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="css/style.css?v=5"></noscript>
+  <link rel="stylesheet" href="css/style.css?v=6" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/style.css?v=6"></noscript>
 
   <!-- UTMify Pixel -->
   <script>
@@ -501,6 +501,25 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=4" defer></script>
+  <!-- POPUP DE SAÍDA (desconto secreto) -->
+  <div class="exit-overlay" id="exit-overlay" hidden>
+    <div class="exit" role="dialog" aria-modal="true" aria-labelledby="exit-headline">
+      <button class="exit__close" id="exit-close" aria-label="Fechar">×</button>
+      <div class="exit__icon">⚠️</div>
+      <p class="exit__headline" id="exit-headline">ESPERE UM POUCO! 🛑</p>
+      <p class="exit__subheadline">SUA RENDA EXTRA NÃO PODE FICAR PRA DEPOIS...</p>
+      <div class="exit__text">
+        Eu vi que você estava saindo sem garantir sua vaga. Você chegou até aqui, então sei que tem <strong>interesse de verdade</strong> em ter uma nova fonte de renda. Não deixa o preço te impedir de começar. Antes de fechar, liberei um <strong class="exit__text-hl">desconto que quase ninguém vê</strong>. Mas ele some no momento que você fechar essa página, então <strong>APROVEITE!</strong>
+      </div>
+      <div class="exit-price">
+        <p class="exit-price__label">LEVE O <strong>PACOTE COMPLETO</strong> (COM TODOS OS BÔNUS E AS VIDEOAULAS) SOMENTE AGORA POR:</p>
+        <p class="exit-price__value"><s>R$29,90</s> <span>R$14,90</span></p>
+      </div>
+      <a href="https://indec-digital.mycartpanda.com/checkout/210958944:1" class="btn-cta exit__cta">👉 QUERO ACESSAR O PACOTE COMPLETO COM DESCONTO</a>
+      <button class="exit__refuse" id="exit-refuse">Não, obrigado. Prefiro continuar dependendo de patrão.</button>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=6" defer></script>
 </body>
 </html>
