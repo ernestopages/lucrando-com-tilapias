@@ -128,6 +128,40 @@
     }, 7000);
   }
 
+  /* ---- POPUP DE UPGRADE (Plano Básico) ---- */
+  function initUpsell() {
+    var overlay = document.getElementById('upsell-overlay');
+    var trigger = document.getElementById('btn-plano-basico');
+    var closeBtn = document.getElementById('upsell-close');
+    if (!overlay || !trigger) return;
+
+    function open() {
+      overlay.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+
+    function close() {
+      overlay.hidden = true;
+      document.body.style.overflow = '';
+    }
+
+    trigger.addEventListener('click', function (e) {
+      e.preventDefault();
+      open();
+    });
+
+    if (closeBtn) closeBtn.addEventListener('click', close);
+
+    /* clique fora do card fecha o popup */
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) close();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !overlay.hidden) close();
+    });
+  }
+
   /* ---- SMOOTH SCROLL ANCHORS ---- */
   function initAnchors() {
     var oferta = document.getElementById('oferta');
@@ -145,6 +179,7 @@
     setOfferDates();
     initTimer();
     initCarousel();
+    initUpsell();
     initAnchors();
   });
 

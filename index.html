@@ -146,8 +146,8 @@
     }
   </style>
 
-  <link rel="stylesheet" href="css/style.css?v=3" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="css/style.css?v=3"></noscript>
+  <link rel="stylesheet" href="css/style.css?v=4" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/style.css?v=4"></noscript>
 
   <!-- UTMify Pixel -->
   <script>
@@ -362,7 +362,7 @@
             </ul>
             <p class="plan-basic__payment">PAGAMENTO ÚNICO</p>
             <p class="plan-basic__price">R$10</p>
-            <a href="https://indec-digital.mycartpanda.com/checkout/210958065:1" class="btn-cta btn-cta--static">QUERO ACESSAR ESSA OPÇÃO</a>
+            <a href="https://indec-digital.mycartpanda.com/checkout/210958065:1" class="btn-cta btn-cta--static" id="btn-plano-basico">QUERO ACESSAR ESSA OPÇÃO</a>
           </div>
         </div>
 
@@ -394,7 +394,7 @@
               <p class="offer-price__from">De <s>R$99,90</s> por apenas</p>
               <p class="offer-price__value">R$29,90</p>
             </div>
-            <a href="https://indec-digital.mycartpanda.com/checkout/210896283:1" class="btn-cta btn-cta--large btn-cta--buy">SIM! QUERO ACESSAR AGORA</a>
+            <a href="https://indec-digital.mycartpanda.com/checkout/210958333:1" class="btn-cta btn-cta--large btn-cta--buy">SIM! QUERO ACESSAR AGORA</a>
             <div class="trust-badges">
               <span>🔒 Compra Segura</span>
               <span>✅ Satisfação Garantida</span>
@@ -418,7 +418,7 @@
           <p class="guarantee__subtitle">RISCO ZERO PARA VOCÊ!</p>
           <p>Confiamos tanto que o conteúdo irá transformar a sua vida e lhe ajudar a conquistar os seus sonhos, que podemos lhe oferecer uma garantia incondicional de até 7 dias após o recebimento do material. É isso mesmo! Se você não gostar do conteúdo ou achar que ele não é o que esperava, basta solicitar o reembolso e lhe devolveremos seu dinheiro integralmente, centavo por centavo, sem perguntas ou qualquer dor de cabeça.</p>
           <!-- CHECKOUT: substituir #CHECKOUT pelo link real antes do lançamento -->
-          <a href="https://indec-digital.mycartpanda.com/checkout/210896283:1" class="btn-cta">QUERO ACESSAR AGORA</a>
+          <a href="https://indec-digital.mycartpanda.com/checkout/210958333:1" class="btn-cta">QUERO ACESSAR AGORA</a>
         </div>
       </div>
     </section>
@@ -471,6 +471,36 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=3" defer></script>
+  <!-- POPUP DE UPGRADE (abre ao clicar no botão do Plano Básico) -->
+  <div class="upsell-overlay" id="upsell-overlay" hidden>
+    <div class="upsell" role="dialog" aria-modal="true" aria-labelledby="upsell-title">
+      <div class="upsell__banner">✋ Espere! Não saia sem ler essa condição especial!</div>
+      <button class="upsell__close" id="upsell-close" aria-label="Fechar">×</button>
+      <div class="upsell__content">
+        <p class="upsell__title" id="upsell-title">Temos uma condição especial pra você levar o nosso <strong>melhor PACOTE</strong>. De <s>R$29,90</s> vai sair por apenas <span class="upsell__title-price">R$19,90</span></p>
+        <p class="upsell__now">🔥 APENAS AGORA! 🔥</p>
+        <div class="upsell-box">
+          <p class="upsell-box__name">PLANO COMPLETO</p>
+          <p class="upsell-box__from">De <s>R$29,90</s></p>
+          <p class="upsell-box__price">R$19,90</p>
+          <ul class="checklist checklist--offer upsell-box__list">
+            <li><span>✅</span><span><strong>Curso Completo em <span class="txt-green">VideoAulas</span> Passo a Passo</strong></span></li>
+            <li><span>✅</span><span>Guia Lucrando com Tilápias</span></li>
+            <li><span>✅</span><span>Apostilas Complementares</span></li>
+            <li><span>✅</span><span><strong>BÔNUS 1</strong>: Lista de Fornecedores</span></li>
+            <li><span>✅</span><span><strong>BÔNUS 2</strong>: Venda Antes de Colher</span></li>
+            <li><span>✅</span><span><strong>BÔNUS 3</strong>: Planilha de Lucro Automática</span></li>
+            <li><span>✅</span><span>Acesso Vitalício</span></li>
+            <li><span>✅</span><span>Suporte Humanizado</span></li>
+            <li><span>✅</span><span>15 dias de Garantia</span></li>
+          </ul>
+        </div>
+        <a href="https://indec-digital.mycartpanda.com/checkout/210958329:1" class="btn-cta upsell__cta">QUERO ESSE</a>
+        <a href="https://indec-digital.mycartpanda.com/checkout/210958065:1" class="upsell__refuse">Quero o plano de R$10</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=4" defer></script>
 </body>
 </html>
