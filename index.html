@@ -29,7 +29,7 @@
       --text: #1E293B;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg);
@@ -146,8 +146,8 @@
     }
   </style>
 
-  <link rel="stylesheet" href="css/style.css?v=4" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="css/style.css?v=4"></noscript>
+  <link rel="stylesheet" href="css/style.css?v=5" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="css/style.css?v=5"></noscript>
 
   <!-- UTMify Pixel -->
   <script>
@@ -480,7 +480,7 @@
         <p class="upsell__title" id="upsell-title">Temos uma condição especial pra você levar o nosso <strong>melhor PACOTE</strong>. De <s>R$29,90</s> vai sair por apenas <span class="upsell__title-price">R$19,90</span></p>
         <p class="upsell__now">🔥 APENAS AGORA! 🔥</p>
         <div class="upsell-box">
-          <p class="upsell-box__name">PLANO COMPLETO</p>
+          <p class="upsell-box__name">PACOTE COMPLETO</p>
           <p class="upsell-box__from">De <s>R$29,90</s></p>
           <p class="upsell-box__price">R$19,90</p>
           <ul class="checklist checklist--offer upsell-box__list">

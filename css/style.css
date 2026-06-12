@@ -602,11 +602,11 @@ details[open] .faq__question::after { transform: rotate(45deg); }
 .upsell__banner {
   background: var(--warning);
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
   text-align: center;
-  padding: 13px 40px;
-  line-height: 1.45;
+  padding: 10px 38px;
+  line-height: 1.4;
   letter-spacing: 0.02em;
 }
 
@@ -624,16 +624,16 @@ details[open] .faq__question::after { transform: rotate(45deg); }
 }
 
 .upsell__content {
-  padding: 20px 20px 24px;
+  padding: 12px 16px 14px;
   text-align: center;
 }
 
 .upsell__title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text);
-  line-height: 1.55;
-  margin-bottom: 14px;
+  line-height: 1.45;
+  margin-bottom: 8px;
 }
 
 .upsell__title s { color: var(--warning); }
@@ -641,69 +641,76 @@ details[open] .faq__question::after { transform: rotate(45deg); }
 .upsell__title-price {
   color: var(--accent);
   font-weight: 900;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .upsell__now {
   display: inline-block;
   background: var(--warning);
   color: #fff;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 900;
-  letter-spacing: 0.08em;
-  padding: 7px 16px;
+  letter-spacing: 0.07em;
+  padding: 5px 14px;
   border-radius: 999px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   box-shadow: 0 3px 12px rgba(220,38,38,0.35);
 }
 
 .upsell-box {
   background: var(--primary-light);
   border: 1px solid rgba(14,90,138,0.15);
-  border-radius: 14px;
-  padding: 16px 16px 8px;
-  margin-bottom: 16px;
+  border-radius: 12px;
+  padding: 10px 14px 4px;
+  margin-bottom: 12px;
 }
 
 .upsell-box__name {
-  font-size: 19px;
+  font-size: 16px;
   font-weight: 900;
   color: var(--primary);
   letter-spacing: 0.02em;
-  margin-bottom: 6px;
+  margin-bottom: 2px;
 }
 
 .upsell-box__from {
-  font-size: 13px;
+  font-size: 12px;
   color: #666;
 }
 
 .upsell-box__from s { color: var(--warning); font-weight: 700; }
 
 .upsell-box__price {
-  font-size: 40px;
+  font-size: 28px;
   font-weight: 900;
   color: var(--accent);
   line-height: 1.1;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .upsell-box__list { margin-bottom: 0; }
 
 .upsell-box__list li {
-  font-size: 13px;
-  padding: 6px 0;
+  font-size: 12px;
+  padding: 4px 0;
+  line-height: 1.4;
   border-bottom: 1px solid rgba(14,90,138,0.08);
 }
 
+.upsell-box__list li span:first-child { font-size: 13px; line-height: 1.4; }
+
+.upsell-box__list .txt-green { font-size: inherit; }
+
 .upsell__cta {
-  font-size: 17px;
-  margin-bottom: 14px;
+  font-size: 15px;
+  padding: 14px 18px;
+  min-height: 0;
+  margin-bottom: 10px;
 }
 
 .upsell__refuse {
   display: block;
-  font-size: 13px;
+  font-size: 12px;
   color: #94A3B8;
   text-decoration: underline;
   text-align: center;
