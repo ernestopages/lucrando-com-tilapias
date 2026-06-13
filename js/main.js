@@ -135,9 +135,12 @@
     var closeBtn = document.getElementById('upsell-close');
     if (!overlay || !trigger) return;
 
+    var openedAt = 0;
+
     function open() {
       overlay.hidden = false;
       document.body.style.overflow = 'hidden';
+      openedAt = Date.now();
     }
 
     function close() {
@@ -145,8 +148,18 @@
       document.body.style.overflow = '';
     }
 
+    /* bloqueia cliques-fantasma do mobile logo após abrir o popup
+       (impede que o mesmo toque acione os links de dentro) */
+    overlay.addEventListener('click', function (e) {
+      if (Date.now() - openedAt < 600) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }, true);
+
     trigger.addEventListener('click', function (e) {
       e.preventDefault();
+      e.stopPropagation();
       open();
     });
 
@@ -169,6 +182,7 @@
     var closeBtn = document.getElementById('exit-close');
     var refuseBtn = document.getElementById('exit-refuse');
     var upsell = document.getElementById('upsell-overlay');
+    var openedAt = 0;
 
     function open() {
       if (!overlay.hidden) return;
@@ -176,12 +190,21 @@
       if (upsell && !upsell.hidden) return;
       overlay.hidden = false;
       document.body.style.overflow = 'hidden';
+      openedAt = Date.now();
     }
 
     function close() {
       overlay.hidden = true;
       document.body.style.overflow = '';
     }
+
+    /* bloqueia cliques-fantasma logo após abrir */
+    overlay.addEventListener('click', function (e) {
+      if (Date.now() - openedAt < 600) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+    }, true);
 
     if (closeBtn) closeBtn.addEventListener('click', close);
     if (refuseBtn) refuseBtn.addEventListener('click', close);
